@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:keepScreenOn="true">
+
+
+
+
+<Button android:layout_centerHorizontal="true" android:layout_height="wrap_content" android:text="Prev" android:id="@+id/prevButton" android:layout_width="fill_parent" android:paddingBottom="5px" android:paddingTop="5px" android:layout_alignParentBottom="true" android:textSize="20px" android:height="70dp"></Button>
+<Button android:layout_centerHorizontal="true" android:layout_above="@+id/prevButton" android:layout_height="wrap_content" android:id="@+id/nextButton" android:text="Next" android:layout_width="fill_parent" android:paddingTop="5px" android:paddingBottom="5px" android:textSize="20px" android:height="70dp"></Button>
+
+<TextView android:layout_centerHorizontal="true" android:layout_height="wrap_content" android:layout_width="wrap_content" android:paddingTop="10px" android:id="@+id/titleText" android:text="Context Aware Meeting Room" android:textStyle="bold" android:paddingBottom="10px" android:textSize="15px"></TextView>
+<TextView android:layout_centerHorizontal="true" android:layout_below="@+id/titleText" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/noteText" android:text="Connecting..." android:paddingLeft="10px" android:paddingRight="10px" android:gravity="center_horizontal" android:textSize="25px"></TextView>
+</RelativeLayout>

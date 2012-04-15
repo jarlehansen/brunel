@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+         http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+
+    <security-constraint>
+        <web-resource-collection>
+            <url-pattern>/*.action</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>*</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <!-- Stripes - Guice integration -->
+    <listener>
+        <listener-class>
+            com.silvermindsoftware.stripes.integration.guice.GuiceContextListener
+        </listener-class>
+    </listener>
+
+    <!-- Guice configuration -->
+    <context-param>
+        <param-name>Guice.Modules</param-name>
+        <param-value>ac.uk.brunel.cloudhomescreen.config.HomeScreenModule</param-value>
+    </context-param>
+
+    <!-- Stripes configuration and Guice integration -->
+    <filter>
+        <display-name>Stripes Filter</display-name>
+        <filter-name>StripesFilter</filter-name>
+        <filter-class>net.sourceforge.stripes.controller.StripesFilter</filter-class>
+
+        <init-param>
+            <param-name>Configuration.Class</param-name>
+            <param-value>com.silvermindsoftware.stripes.config.GuiceRuntimeConfiguration</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ActionBeanContextFactory.Class</param-name>
+            <param-value>com.silvermindsoftware.stripes.controller.GuiceActionBeanContextFactory</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ActionResolver.Class</param-name>
+            <param-value>com.silvermindsoftware.stripes.controller.GuiceActionResolver</param-value>
+        </init-param>
+
+        <!-- Package scanned for action beans -->
+        <init-param>
+            <param-name>ActionResolver.Packages</param-name>
+            <param-value>ac.uk.brunel.cloudhomescreen.presentation.beans</param-value>
+        </init-param>
+
+        <!-- Workaround for file upload in app engine -->
+        <init-param>
+            <param-name>MultipartWrapperFactory.Class</param-name>
+            <param-value>ac.uk.brunel.cloudhomescreen.transport.wrapper.EmptyMultipartWapper</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>StripesFilter</filter-name>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <servlet-class>net.sourceforge.stripes.controller.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <url-pattern>*.action</url-pattern>
+    </servlet-mapping>
+
+
+    <listener>
+        <listener-class>ac.uk.brunel.cloudhomescreen.config.WebRegistrationListener</listener-class>
+    </listener>
+
+    <filter>
+        <filter-name>guiceFilter</filter-name>
+        <filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>guiceFilter</filter-name>
+        <url-pattern>/register/*</url-pattern>
+    </filter-mapping>
+
+    <welcome-file-list>
+        <welcome-file>WEB-INF/index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

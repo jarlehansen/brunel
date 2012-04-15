@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+    <display-name>context-aware-meeting-room</display-name>
+
+    <!-- Wicket configuration -->
+    <filter>
+        <init-param>
+            <param-name>configuration</param-name>
+            <param-value>deployment</param-value> <!-- development or deployment -->
+        </init-param>
+
+        <filter-name>HomePage</filter-name>
+        <filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
+        <init-param>
+            <param-name>applicationClassName</param-name>
+            <param-value>ac.uk.brunel.server.contextaware.config.WicketWebApplicationSettings</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>HomePage</filter-name>
+        <url-pattern>/meeting/*</url-pattern>
+    </filter-mapping>
+
+    
+    <!-- Guice configuration -->
+    <filter>
+        <filter-name>guiceFilter</filter-name>
+        <filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>guiceFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <listener>
+        <listener-class>ac.uk.brunel.server.contextaware.config.MeetingUserServletConfig</listener-class>
+    </listener>
+</web-app>

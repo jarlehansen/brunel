@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="ac.uk.brunel.benchmark.client"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="8"/>
+
+
+    <permission android:name="ac.uk.brunel.benchmark.client.permission.C2D_MESSAGE"
+                android:protectionLevel="signature"/>
+
+    <uses-permission android:name="ac.uk.brunel.benchmark.client.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+
+    <application android:label="@string/app_name" android:name="TaskStateApplication">
+        <!-- REQUIRED -->
+        <receiver android:name="com.urbanairship.CoreReceiver">
+            <!-- REQUIRED IntentFilter - For Helium and Hybrid -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- REQUIRED -->
+        <!-- The 'android:process' parameter is optional. Set it to a value starting
+            with a colon (:) to make it run in a separate,
+            private process -->
+        <service android:name="com.urbanairship.push.PushService"
+                 android:process=":com.urbanairship.push.process"/>
+
+        <receiver android:name="ac.uk.brunel.benchmark.client.task.urbanairship.UrbanAirshipIntentReceiver"/>
+
+
+        <activity android:name="MyActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <service android:name=".C2DMReceiver"/>
+
+        <receiver android:name="com.google.android.c2dm.C2DMBroadcastReceiver"
+                  android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="ac.uk.brunel.benchmark.client"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="ac.uk.brunel.benchmark.client"/>
+            </intent-filter>
+        </receiver>
+
+
+        <activity
+                android:name="com.xtify.android.sdk.SettingsActivity"
+                android:label="Settings"
+                >
+        </activity>
+        <activity
+                android:name="com.xtify.android.sdk.NotificationDetailsActivity"
+                android:label="Notification Details"
+                android:screenOrientation="portrait"
+                >
+        </activity>
+        <activity
+                android:name="com.xtify.android.sdk.NotificationSettingsActivity"
+                android:label="Notification Settings"
+                >
+        </activity>
+        <service
+                android:name="com.xtify.android.sdk.MainService"
+                android:label="Notifications Service"
+                >
+            <intent-filter>
+                <action android:name="com.xtify.android.sdk.IMainService"/>
+                <category android:name="com.xtify.android.sdk.IMainService"/>
+                <category android:name="com.xtify.android.sdk.IMainService.V1050"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".task.xtify.XtifyIntentReceiver">
+            <intent-filter android:priority="1">
+                <action android:name="com.xtify.android.sdk.SHOW_NOTIFICATION"/>
+                <!-- KEEP THE FORWARD SLASH IN FRONT OF THE APP KEY ON THE LINE BELOW -->
+                <data android:scheme="notif" android:host="notification.xtify.com"
+                      android:pathPrefix="/f850dc86-5d9d-4f9e-a6db-f7dd2ad30334"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.xtify.android.sdk.MainReceiver">
+            <intent-filter android:priority="2">
+                <action android:name="com.xtify.android.sdk.SHOW_NOTIFICATION"/>
+                <action android:name="com.xtify.android.sdk.NOTIFICATION_CLICKED"/>
+                <action android:name="com.xtify.android.sdk.NOTIFICATION_CLEARED"/>
+                <!-- MAKE SURE THE APP KEY ON THE NEXT LINE IS PRECEDED BY A SLASH -->
+                <data android:scheme="notif" android:host="notification.xtify.com"
+                      android:pathPrefix="/f850dc86-5d9d-4f9e-a6db-f7dd2ad30334"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="com.xtify.android.sdk.SEND_SETTINGS"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="XTIFY_SDK_API_KEY" android:value=""/>
+    </application>
+</manifest> 

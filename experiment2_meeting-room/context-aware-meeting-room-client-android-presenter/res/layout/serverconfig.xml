@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical" android:layout_height="fill_parent" android:layout_width="fill_parent" android:keepScreenOn="true">
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:id="@+id/serverConfigText" android:text="@string/serverConfigText" android:textStyle="bold"></TextView>
+<EditText android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/serverConfigInput"></EditText>
+<Button android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="@string/saveButtonText" android:id="@+id/saveButton" android:textSize="20px" android:height="70dp"></Button>
+
+</LinearLayout>

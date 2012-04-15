@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+    <application>sc2dm-manifest-generator</application>
+    <version>1</version>
+
+    <static-files>
+        <include path="/style/style.css" />
+        <include path="/js/ZeroClipboard.js" />
+        <include path="/js/ZeroClipboard10.swf" />
+        <include path="/favicon.ico" />
+        <include path="/build.properties" />
+    </static-files>
+</appengine-web-app>

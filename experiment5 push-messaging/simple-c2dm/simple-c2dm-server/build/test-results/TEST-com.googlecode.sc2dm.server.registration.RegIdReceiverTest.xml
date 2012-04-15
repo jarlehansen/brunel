@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="Jarles-MacBook-Pro.local" name="com.googlecode.sc2dm.server.registration.RegIdReceiverTest" tests="2" time="0.059" timestamp="2011-11-25T11:34:40">
+  <properties />
+  <testcase classname="com.googlecode.sc2dm.server.registration.RegIdReceiverTest" name="createPushDevice_nullRequestValues" time="0.0070" />
+  <testcase classname="com.googlecode.sc2dm.server.registration.RegIdReceiverTest" name="createPushDevice_validRequestValues" time="0.0020" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Nov 25, 2011 12:34:40 PM com.googlecode.sc2dm.server.registration.RegIdReceiver createPushDevice
+WARNING: The 'email' request parameter was null, setting it to empty string
+Nov 25, 2011 12:34:40 PM com.googlecode.sc2dm.server.registration.RegIdReceiver createPushDevice
+WARNING: The 'regId' request parameter was null, setting it to empty string
+Nov 25, 2011 12:34:40 PM com.googlecode.sc2dm.server.registration.RegIdReceiver createPushDevice
+INFO: E-mail: test@test.com
+Nov 25, 2011 12:34:40 PM com.googlecode.sc2dm.server.registration.RegIdReceiver createPushDevice
+INFO: Registration id: test-regid
+]]></system-err>
+</testsuite>

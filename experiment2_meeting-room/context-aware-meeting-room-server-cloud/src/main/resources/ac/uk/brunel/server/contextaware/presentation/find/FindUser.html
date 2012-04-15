@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.sourceforge.net/">
+<head>
+    <title>Find Users</title>
+</head>
+<body>
+<span wicket:id="menu">
+    <h2>Find User</h2>
+        <form wicket:id="find_user_form">
+            User e-mail: <input type="text" wicket:id="inputEmail"/><br/>
+            <input type="submit" value="Find user"/>
+        </form>
+    <div wicket:id="validation_messages"/>
+    <span wicket:id="users">
+        <b>Search result:</b><br/>
+        <i>E-mail:</i> <span wicket:id="email" /><br/>
+        <i>First name:</i> <span wicket:id="firstName" /><br/>
+        <i>Last name:</i> <span wicket:id="lastName" /><br/>
+        <i>Bluetooth address:</i> <span wicket:id="btAddress" /><br/>
+    </span>
+    </span>
+</body>
+</html>

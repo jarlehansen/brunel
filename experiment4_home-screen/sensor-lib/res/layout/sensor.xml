@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:id="@+id/sensorLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        >
+    <TextView
+            android:id="@+id/sensor_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5px"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            >
+    </TextView>
+    <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5px"
+            android:textSize="16sp"
+            android:textStyle="bold|italic"
+            android:layout_marginLeft="5px"
+            android:layout_marginRight="5px"
+            android:gravity="center"
+            >
+    </TextView>
+    <TextView
+            android:id="@+id/statusText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:textSize="16sp"
+            android:gravity="center"
+            >
+    </TextView>
+</LinearLayout>

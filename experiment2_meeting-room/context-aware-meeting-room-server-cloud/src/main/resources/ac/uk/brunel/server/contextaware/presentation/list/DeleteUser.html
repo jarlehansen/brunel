@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.sourceforge.net/">
+<head>
+    <title>Delete Users</title>
+</head>
+<body>
+<span wicket:id="menu">
+    <h2>Delete User</h2>
+        <p>Would you like to delete user: <b><span wicket:id="email"/></b>?</p>
+        <form wicket:id="deleteUserForm">
+            Admin password: <input type="password" wicket:id="AdminPassword" />
+            <input type="submit" value="Delete" />
+        </form>
+        <div wicket:id="validation_messages"/>
+    </span>
+</body>
+</html>

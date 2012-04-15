@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">MeetingRoomPresenter</string>
+<string name="titleText">Context aware meeting room</string>
+<string name="statusText">Press &quot;Menu&quot; -&gt; &quot;Connect&quot; to start the remote control</string>
+<string name="nextButton">Next slide</string>
+<string name="prevButton">Previous slide</string>
+<string name="defaultServerAddress">http://localhost:9090</string>
+<string name="serverConfigText">Server Config</string>
+<string name="saveButtonText">Save</string>
+
+</resources>

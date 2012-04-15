@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="Jarles-MacBook-Pro.local" name="com.googlecode.sc2dm.server.sender.C2DMMessageSenderIT" tests="1" time="0.0020" timestamp="2011-11-25T11:34:40">
+  <properties />
+  <ignored-testcase classname="com.googlecode.sc2dm.server.sender.C2DMMessageSenderIT" name="send" time="0.0" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

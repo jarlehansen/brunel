@@ -1,0 +1,9 @@
+package ac.uk.brunel.contextaware;
+
+option java_package = "ac.uk.brunel.contextaware.network.generated";
+
+message Note {
+    required string btAddress = 1;
+	optional string meetingId = 2;
+	optional string message = 3;
+}

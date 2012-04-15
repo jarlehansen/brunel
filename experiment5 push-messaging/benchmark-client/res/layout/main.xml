@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:keepScreenOn="true"
+        >
+     <TextView
+            android:layout_width="fill_parent"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="E-mail:"
+            />
+    <TextView android:id="@+id/email"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text=""
+            />
+     <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+    <TextView
+            android:layout_width="fill_parent"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Delay between timers:"
+            />
+    <TextView android:id="@+id/period"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text=""
+            />
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+    <TextView
+            android:layout_width="fill_parent"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="C2DM messages received:"
+            />
+    <TextView android:id="@+id/c2dm"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="0"
+            />
+     <TextView android:id="@+id/c2dmRegId"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="Connecting..."
+            />
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+    <TextView
+            android:layout_width="fill_parent"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="XMPP messages received:"
+            />
+    <TextView android:id="@+id/xmpp"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="0"
+            />
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+    <TextView
+            android:layout_width="fill_parent"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Urban Airship messages received:"
+            />
+    <TextView android:id="@+id/ua"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="0"
+            />
+     <TextView android:id="@+id/uaRegId"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="Connecting..."
+            />
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+    <TextView
+            android:layout_width="fill_parent"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:text="Xtify messages received:"
+            />
+    <TextView android:id="@+id/xtify"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="0"
+            />
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            />
+    <Button android:id="@+id/startButton"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="\nStart\n"/>
+    <Button android:id="@+id/exitButton"
+            android:textStyle="bold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="\nExit\n"/>
+
+
+</LinearLayout>
+

@@ -1,0 +1,7 @@
+package ac.uk.brunel.contextaware;
+
+option java_package = "ac.uk.brunel.contextaware.network.generated";
+
+message PresenterAction {
+    required string action = 1;
+}

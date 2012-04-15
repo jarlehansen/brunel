@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="Jarles-MacBook-Pro.local" name="com.googlecode.sc2dm.server.sender.C2DMMessageSenderTest" tests="4" time="0.017" timestamp="2011-11-25T11:34:40">
+  <properties />
+  <testcase classname="com.googlecode.sc2dm.server.sender.C2DMMessageSenderTest" name="updatedAuthToken" time="0.013" />
+  <testcase classname="com.googlecode.sc2dm.server.sender.C2DMMessageSenderTest" name="init_MessageSender" time="0.0010" />
+  <testcase classname="com.googlecode.sc2dm.server.sender.C2DMMessageSenderTest" name="getStoredToken" time="0.0" />
+  <testcase classname="com.googlecode.sc2dm.server.sender.C2DMMessageSenderTest" name="updatedAuthToken_nullValue" time="0.0" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[1262 [Outgoing Connection [b9be73f7-1de4-47f0-91bc-f7fd262c4761 port:51508, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]:0 worker] WARN com.googlecode.sc2dm.server.sender.C2DMMessageSender - Received updated auth storedToken from C2DM servers: updated-token
+1274 [Outgoing Connection [b9be73f7-1de4-47f0-91bc-f7fd262c4761 port:51508, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]:0 worker] WARN com.googlecode.sc2dm.server.sender.C2DMMessageSender - Received updated auth storedToken from C2DM servers: updated-token
+]]></system-err>
+</testsuite>

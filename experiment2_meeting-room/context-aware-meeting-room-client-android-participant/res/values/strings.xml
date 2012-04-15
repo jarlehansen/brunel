@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="titleText">Welcome to the\nContext Aware Meeting Room</string>
+    <string name="app_name">MeetingRoomParticipant</string>
+
+<string name="serverConfigText">Server Config</string>
+<string name="defaultServerAddress">http://context-aware-meeting-room.appspot.com/presentationNotes</string>
+
+<string name="defaultBluetoothAddress">012345678900</string>
+</resources>

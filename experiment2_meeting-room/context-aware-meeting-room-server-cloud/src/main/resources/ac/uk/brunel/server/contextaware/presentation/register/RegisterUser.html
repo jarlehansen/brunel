@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.sourceforge.net/">
+<head>
+    <title>Register User</title>
+</head>
+<body>
+
+<span wicket:id="menu">
+    <h2>Register User</h2>
+
+    <table border="0">
+        <form wicket:id="register_user_form">
+            <tr>
+                <td>E-mail:</td>
+                <td><input type="text" wicket:id="email"/>*</td>
+            </tr>
+            <tr>
+                <td>First name:</td>
+                <td><input type="text" wicket:id="firstName"/>*</td>
+            </tr>
+            <tr>
+                <td>Last name:</td>
+                <td><input type="text" wicket:id="lastName"/>*</td>
+            </tr>
+            <tr>
+                <td>Bluetooth address:</td>
+                <td><input type="text" wicket:id="btAddress"/>* (12 Characters)</td>
+            </tr>
+            <tr>
+                <td colspan="2"><i>* = Required</i></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Register"/></td>
+            </tr>
+        </form>
+    </table>
+    <div wicket:id="validation_messages"/>
+</span>
+
+</body>
+</html>

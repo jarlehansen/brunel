@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<datastore-indexes autoGenerate="true">
+    <datastore-index kind="MeetingJpaWrapper" ancestor="false" source="manual">
+        <property name="presenter" direction="asc"/>
+        <property name="startTime" direction="asc"/>
+    </datastore-index>
+</datastore-indexes>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.sourceforge.net/">
+<head>
+    <title>List Meetings</title>
+    <meta http-equiv="refresh" content="10" />    
+    <script type="text/javascript">
+        <!--
+        function toggle_visibility(id) {
+            var e = document.getElementById(id);
+            if (e.style.display == 'block')
+                e.style.display = 'none';
+            else
+                e.style.display = 'block';
+        }
+        //-->
+    </script>
+</head>
+<body>
+<span wicket:id="menu">
+    <h2>List Meetings: <span wicket:id="meetingDate">[meetingDate]</span></h2>
+    <table border="1" width="70%">
+        <tr>
+            <th>Start time</th>
+            <th>End time</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Location</th>
+            <th>Presenter</th>
+            <th>Participants</th>
+            <th>Presentation link</th>
+        </tr>
+        <tr wicket:id="meeting_list">
+            <td><span wicket:id="startTime">[startTime]</span></td>
+            <td><span wicket:id="endTime">[endTime]</span></td>
+            <td><span wicket:id="title">[title</span></td>
+            <td><span wicket:id="description">[description]</span></td>
+            <td><span wicket:id="location">[location]</span></td>
+            <td><span wicket:id="presenter">[presenter]</span></td>
+            <td><span wicket:id="participants">[participants]</span></td>
+            <td><a href="#" wicket:id="presentationLink" target="_blank">Presentation</a></td>
+        </tr>
+    </table>
+    <br/>
+    <a href="javascript:location.reload(true)">Refresh page</a><br/>
+    <a href="#" target="_self" wicket:id="refresh_list_link">Refresh meeting list</a><br/>
+    <i>This page refreshes automatically every 10 seconds</i><br/><br/>
+    <a href="#" onclick="toggle_visibility('error');">Delete all meetings</a><br/>
+    <div id="error" style='display:none;'>
+        <form wicket:id="deleteMeetingsForm">
+            Admin password: <input type="password" wicket:id="AdminPassword"/>
+            <input type="submit" value="Delete"/>
+        </form>
+    </div>
+    <div wicket:id="validation_messages">[validation_messages]</div>
+    </span>
+</body>
+</html>

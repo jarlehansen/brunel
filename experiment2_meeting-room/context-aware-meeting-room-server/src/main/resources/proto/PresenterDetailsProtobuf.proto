@@ -1,0 +1,8 @@
+package ac.uk.brunel.contextaware;
+
+option java_package = "ac.uk.brunel.contextaware.network.generated";
+
+message PresenterDetails {
+    required string email = 1;
+    optional string password = 2;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.sourceforge.net/">
+<head>
+    <title>Error</title>
+    <script type="text/javascript">
+        <!--
+        function toggle_visibility(id) {
+            var e = document.getElementById(id);
+            if (e.style.display == 'block')
+                e.style.display = 'none';
+            else
+                e.style.display = 'block';
+        }
+        //-->
+    </script>
+</head>
+<body>
+<span wicket:id="menu">
+    <h2>An error occured:</h2>
+        <i>Page:</i> <span wicket:id="pageInfo">[pageInfo]</span><br/>
+        <i>Error message:</i> <span wicket:id="errorMsg">[errorMsg]</span><br/>
+        <i>Cause message:</i> <span wicket:id="causeMsg">[causeMsg]</span><br/><br/>
+        <a href="#" onclick="toggle_visibility('error');">Display stack trace</a><br/>
+        <div id="error" style='display:none;'><span wicket:id="stackTrace">[stackTrace]</span><br/></div>
+    </span>
+</body>
+</html>

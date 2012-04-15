@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.sourceforge.net/">
+<head>
+    <title>List Users</title>
+</head>
+<body>
+<span wicket:id="menu">
+    <h2>List Users</h2>
+    <table border="1" width="50%">
+        <tr>
+            <th>E-mail</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Bluetooth address</th>
+            <th>Delete user?</th>
+        </tr>
+        <tr wicket:id="user_list">
+            <td><span wicket:id="email"/></td>
+            <td><span wicket:id="firstName"/></td>
+            <td><span wicket:id="lastName"/></td>
+            <td><span wicket:id="btAddress"/></td>
+            <td><a href="#" wicket:id="deleteUserLink">X</a></td>
+        </tr>
+    </table>
+    </span>
+</body>
+</html>

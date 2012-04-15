@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="Jarles-MacBook-Pro.local" name="com.googlecode.sc2dm.server.sender.MessageDataTest" tests="2" time="0.0060" timestamp="2011-11-25T11:34:40">
+  <properties />
+  <testcase classname="com.googlecode.sc2dm.server.sender.MessageDataTest" name="createMessageString" time="0.0010" />
+  <testcase classname="com.googlecode.sc2dm.server.sender.MessageDataTest" name="createMessageString_messageTooLarge" time="0.0020" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[1281 [Outgoing Connection [b9be73f7-1de4-47f0-91bc-f7fd262c4761 port:51508, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]:0 worker] WARN com.googlecode.sc2dm.server.sender.MessageData - Total size of message (1067 bytes) is larger than max size (1024 bytes), removing parts of message
+1281 [Outgoing Connection [b9be73f7-1de4-47f0-91bc-f7fd262c4761 port:51508, addresses:[/0:0:0:0:0:0:0:1, /127.0.0.1]]:0 worker] WARN com.googlecode.sc2dm.server.sender.MessageData - New message: registration_id=registrationId&collapse_key=1322220880532&data.msg=iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+]]></system-err>
+</testsuite>

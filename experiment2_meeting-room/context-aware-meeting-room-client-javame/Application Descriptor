@@ -1,0 +1,11 @@
+default-server-address: http://context-aware-meeting-room.appspot.com/presentationNotes
+MIDlet-2: RecordStoreViewer,,net.sf.microlog.midp.RecordStoreLogViewer
+default-server-address-2: http://localhost:8080/presentationNotes
+MIDlet-1: MeetingRoomMidlet,,ac.uk.brunel.mobile.contextaware.midlet.ContextAwareMeetingRoomMidlet
+MIDlet-Jar-URL: context-aware-meeting-room-client-javame.jar
+MicroEdition-Configuration: CLDC-1.0
+MIDlet-Version: 1.0.0
+MIDlet-Vendor: MIDlet Suite Vendor
+MIDlet-Name: context-aware-meeting-room-client-javame MIDlet Suite
+server-poll-frequency: 1000
+MicroEdition-Profile: MIDP-2.0

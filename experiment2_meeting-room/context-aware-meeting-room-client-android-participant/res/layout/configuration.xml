@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical" android:layout_height="fill_parent" android:layout_width="fill_parent" android:keepScreenOn="true">
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold" android:textSize="15px" android:text="Server address:" android:id="@+id/serverConfigText"></TextView>
+<EditText android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/serverAddressInput"></EditText>
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/bluetoothAddressText" android:text="Bluetooth address:" android:textSize="15px" android:textStyle="bold"></TextView><EditText android:layout_height="wrap_content" android:id="@+id/bluetoothAddressInput" android:layout_width="fill_parent"></EditText><Button android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/saveButton" android:text="Save" android:textSize="20px" android:height="70dp"></Button>
+
+
+
+</LinearLayout>

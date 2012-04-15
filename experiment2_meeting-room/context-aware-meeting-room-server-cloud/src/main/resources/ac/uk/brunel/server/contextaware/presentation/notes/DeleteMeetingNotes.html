@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.sourceforge.net/">
+<head>
+    <title>Delete Meeting Notes</title>
+</head>
+<body>
+<span wicket:id="menu">
+    <h2>Delete Meeting Notes</h2>
+    <p>Number of started meetings: <span wicket:id="numberOfMeetingNotes">[numberOfMeetingNotes]</span></p>
+    <form wicket:id="deleteMeetingNotesForm">
+        Admin password: <input type="password" wicket:id="AdminPassword"/>
+        <input type="submit" value="Delete"/>
+    </form>
+    <div wicket:id="validation_messages">[validation_messages]</div>
+    </span>
+</body>
+</html>
